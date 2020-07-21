@@ -1,0 +1,34 @@
+$primary: #fe6056;
+$primary-contrast: white;
+.primary {
+  background-color: $primary;
+  color: $primary-contrast;
+}
+
+$secondary: #495867;
+$secondary-contrast: white;
+.secondary {
+  background-color: $secondary;
+  color: $secondary-contrast;
+}
+
+$accent: #bdd4ea;
+$accent-contrast: $secondary;
+.accent {
+  background-color: white;
+  color: $accent-contrast;
+}
+
+$grey: #eef3f8;
+$grey-contrast: black;
+.grey-a {
+  background-color: $grey;
+  color: $grey-contrast;
+}
+
+$white: #fdfdfe;
+$white-contrast: black;
+.grey-b {
+  background-color: $white;
+  color: $white-contrast;
+}
