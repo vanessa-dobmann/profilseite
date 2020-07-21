@@ -1,8 +1,9 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <Layout/>
+<!--      <router-link to="/">Home</router-link> |-->
+<!--      <router-link to="/about">About</router-link>-->
     </div>
     <router-view/>
   </div>
@@ -30,3 +31,9 @@
   }
 }
 </style>
+<script>
+import Layout from './components/layout/Layout'
+export default {
+  components: { Layout }
+}
+</script>
