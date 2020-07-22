@@ -2,17 +2,22 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 
-// eslint-disable-next-line no-unused-vars
 import { library } from '@fortawesome/fontawesome-svg-core'
-// eslint-disable-next-line no-unused-vars
+import { faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-Vue.use(BootstrapVue)
 
+Vue.use(BootstrapVue)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false
+
+library.add(faLinkedin)
+library.add(faInstagram)
+library.add(faEnvelope)
 
 new Vue({
   router,

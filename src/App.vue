@@ -1,13 +1,22 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <Layout/>
-<!--      <router-link to="/">Home</router-link> |-->
-<!--      <router-link to="/about">About</router-link>-->
+    <div id="page-container">
+      <div id="content-wrap">
+        <Header></Header>
+        <router-view/>
+        <Footer class="footer"></Footer>
+      </div>
     </div>
-    <router-view/>
   </div>
 </template>
+
+<script>
+import Header from './components/layout/Header'
+import Footer from './components/layout/Footer'
+export default {
+  components: { Footer, Header }
+}
+</script>
 
 <style lang="scss">
 #app {
@@ -16,24 +25,21 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: $secondary;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: $secondary;
     }
   }
 }
-</style>
-<script>
-import Layout from './components/layout/Layout'
-export default {
-  components: { Layout }
+#page-container {
+  position: relative;
+  min-height: 100vh;
 }
-</script>
+
+#content-wrap {
+  padding-bottom: 5rem;    /* Footer height */
+}
+</style>

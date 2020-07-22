@@ -1,21 +1,23 @@
 <template>
   <div class="layout__header">
-    <b-container fluid="true" class="mt-4 ml-2 mr-2">
-      <b-row align-h="between" align-v="start">
-        <b-col cols="2" class="m-1 logo-wrapper">
+    <b-container fluid="true">
+      <b-row align-h="between" align-v="start" class="m-4">
+        <b-col cols="2" md="1" class="mt-1 logo-wrapper" align-self="start">
           <img src="../../assets/logo.png" alt="Logo" class="logo"/>
         </b-col>
-        <b-col cols="4" class="m-1">
-          Navigation
+        <b-col class="nav-wrapper">
+          <Navigation/>
         </b-col>
       </b-row>
     </b-container>
-  </div>
+   </div>
 </template>
 
 <script>
+import Navigation from './Navigation'
 export default {
-  name: 'LayoutHeader'
+  name: 'Header',
+  components: { Navigation }
 }
 </script>
 
@@ -25,13 +27,14 @@ export default {
     top: 0;
     left: 0;
     right: 0;
+    height: 50px;
   }
-
   .logo {
     max-height: 100%;
   }
-
   .logo-wrapper {
-    height: 30px;
+    height: 25px;
+  }
+  .nav-wrapper{
   }
 </style>
